@@ -1,0 +1,25 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family:"eudoxus sans"
+}
+body{
+    @apply text-gray-900;
+}
+.btn{
+    @apply bg-purple-600 text-sm text-gray-100 py-3 px-6 lg:px-8 font-semibold rounded hover:bg-purple-400 hover:text-gray-100 border-2;
+}
+
+.btn-big {
+    @apply bg-purple-600 text-sm text-gray-100 py-4 px-10 lg:px-16 font-semibold rounded hover:bg-purple-400 hover:text-gray-100 border-2;
+}
+.hm-input{
+    @apply p-4 w-full rounded-2xl bg-gray-300 focus:outline-none;
+}
+
+.hm-send{
+    @apply p-4 w-full rounded-2xl bg-purple-600 focus:outline-none text-gray-100;
+}
