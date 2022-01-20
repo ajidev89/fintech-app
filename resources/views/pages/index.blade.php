@@ -4,7 +4,7 @@
     <section class="lg:container lg:mx-auto mx-3 py-5 lg:py-8 grid grid-cols-1 lg:grid-cols-2 place-c lg:gap-4" >
         <div class="flex items-center mb-8 lg:mb-0">
             <div>
-                <h1 class="text-3xl lg:text-5xl font-semibold leading-tight ">
+                <h1 class="text-3xl lg:text-5xl font-semibold leading-normal ">
                     Send money <br> 
                     to your family or friend <br>
                     in different countries.
