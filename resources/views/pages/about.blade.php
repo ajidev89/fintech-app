@@ -5,7 +5,7 @@
         'pageName' => 'About us'
     ])
 
-    <section class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 px-5 lg:p-36 " >
+    <section class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 px-5 pt-10 lg:p-36 " >
         <div class="" >
             <img src="https://images.pexels.com/photos/7007189/pexels-photo-7007189.jpeg" class="rounded-md " alt="">
         </div>
