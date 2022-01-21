@@ -22,3 +22,5 @@ Route::get('/faqs', 'App\Http\Controllers\WebController@faqs')->name('faqs');
 
 Route::get('/login', 'App\Http\Controllers\UserController@showLogin')->name('login');
 Route::get('/sign-up', 'App\Http\Controllers\UserController@showSignUp')->name('signUp');
+Route::get('/forget-password', 'App\Http\Controllers\UserController@showForget')->name('forget');
+Route::get('/change-password/{email}/{token}', 'App\Http\Controllers\UserController@showChangePassword')->name('ChangePassword');

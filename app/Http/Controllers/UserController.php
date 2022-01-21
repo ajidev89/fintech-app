@@ -15,4 +15,12 @@ class UserController extends Controller
     public function showSignUp(){
         return view('auth.register',['title'=>'Sign up']); 
     }
+
+    public function showForget(){
+        return view('auth.forget',['title'=>'Forget Password']);    
+    }
+
+    public function showChangePassword(){
+        return view('auth.change',['title'=>'Change Password']);
+    }
 }

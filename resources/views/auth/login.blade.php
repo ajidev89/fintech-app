@@ -15,7 +15,7 @@
             <input type="password" name="password" class="p-3 rounded-md mt-2 w-full" placeholder="Password">
         </div>
         <div class="text-right text-sm my-6">
-            <a href="">Forgot Password</a>
+            <a href="{{ route("forget") }}">Forgot Password</a>
         </div>
 
         <button type="submit" class="font-semibold bg-purple-600 p-3 w-full rounded-md text-gray-100" >Log in</button>
