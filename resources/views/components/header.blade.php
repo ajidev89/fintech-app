@@ -16,12 +16,12 @@
                     <a href="{{ route('faqs') }}">FAQs</a>
                 </li>
             </ul>
-            <button class="btn">
+            <a href="{{ route('login') }}" class="btn">
                 Log in
-            </button>
-            <button class="btn">
+            </a>
+            <a href="{{ route("signUp") }}" class="btn">
                 Sign up
-            </button>
+            </a>
         </div>
         <div class="lg:hidden" >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">

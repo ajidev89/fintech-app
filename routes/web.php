@@ -20,5 +20,5 @@ Route::get('/faqs', 'App\Http\Controllers\WebController@faqs')->name('faqs');
 
 
 Route::get('/login', 'App\Http\Controllers\UserController@showLogin')->name('login');
-Route::get('/sign-up', 'App\Http\Controllers\UserController@signUp')->name('signUp');
+Route::get('/sign-up', 'App\Http\Controllers\UserController@showSignUp')->name('signUp');
 

@@ -11,4 +11,8 @@ class UserController extends Controller
     {
         return view('auth.login',['title'=>'Log in']);
     }
+
+    public function showSignUp(){
+        return view('auth.register',['title'=>'Sign up']); 
+    }
 }
