@@ -13,5 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\WebController@index');
+Route::get('/', 'App\Http\Controllers\WebController@index')->name('home');
+Route::get('/about', 'App\Http\Controllers\WebController@about')->name('about');
+Route::get('/contact', 'App\Http\Controllers\WebController@contact')->name('contact');
+Route::get('/faqs', 'App\Http\Controllers\WebController@faqs')->name('faqs');
+
+
+Route::get('/login', 'App\Http\Controllers\UserController@showLogin')->name('login');
+Route::get('/sign-up', 'App\Http\Controllers\UserController@signUp')->name('signUp');
 

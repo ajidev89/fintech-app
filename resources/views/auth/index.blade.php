@@ -9,10 +9,17 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    @include('components.header')
-    @yield('content')
+    <section class="h-screen grid grid-cols-5" >
+        <div class="col-span-2 bg-gray-100 flex items-center p-8 "> 
+            <div class="flex-grow">
+                <a href="{{ URL::previous() }}" class="text-sm">Back home</a>
+                @yield('content')
+            </div>
+        </div>
+        <div class="col-span-3 bg-gray-600" >
+            l,;l,;,
+        </div>
+    </section>
     @yield('scripts')
-    @include('components.footer')
-
 </body>
 </html>

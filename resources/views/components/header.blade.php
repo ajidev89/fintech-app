@@ -2,11 +2,19 @@
     <div class="flex items-center justify-between">
         <div class="font-semibold text-brand text-xl" >Hallifield</div>
         <div class="lg:flex space-x-6 hidden" >
-            <ul class="flex items-center space-x-10 ">
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Contact Us</li>
-                <li>FAQs</li>
+            <ul class="flex items-center space-x-10 text-sm font-medium">
+                <li>
+                   <a href="{{ route('home') }}">Home</a> 
+                </li>
+                <li>
+                    <a href="{{ route('about') }}">About us</a>
+                </li>
+                <li>
+                    <a href="{{ route('contact') }}">Contact us</a>
+                </li>
+                <li>
+                    <a href="{{ route('faqs') }}">FAQs</a>
+                </li>
             </ul>
             <button class="btn">
                 Log in
