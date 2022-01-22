@@ -67,7 +67,7 @@
 
                 <div class="my-6" >
                     <label for="message" class="text-sm block">Message</label>
-                    <textarea name="message" id="" cols="30" rows="10" class="p-3 rounded-md mt-2 w-full bg-gray-200" placeholder="Enter Message .." ></textarea>
+                    <textarea name="message" id="" cols="30" rows="6" class="p-3 rounded-md mt-2 w-full bg-gray-200" placeholder="Enter Message .." ></textarea>
                     
                 </div>
                 
