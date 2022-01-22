@@ -54,6 +54,7 @@
             </div>
         </div>
         <div class="shadow-2xl p-8 rounded-md">
+            <p class="font-semibold text-2xl" >Send a message</p>
             <form action="" method="post" class="my-8">
                 <div class="" >
                     <label for="name" class="text-sm block">Full Name</label>
