@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }} | Hallifield money</title>
     <link rel="stylesheet" href="{{ asset('fonts/index.css') }}">
+    <link rel='stylesheet' href='{{ asset('icons/css/uicons-regular-rounded.css') }}'>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
