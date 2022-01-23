@@ -2,7 +2,7 @@
     <div class="font-semibold uppercase text-sm">
         Hallifield
     </div>
-    <div class="my-8 text-sm grid grid-rows-1 gap-4" >
+    <div class="my-10 text-sm grid grid-rows-1 gap-4" >
         <a href="#" class="flex items-center space-x-4">
             <div class="bg-purple-100 hover:bg-purple-300 transition-colors duration-300 delay-75 rounded-md py-2 px-4 flex items-center">
                 <div><i class="fi fi-rr-apps"></i></div>
