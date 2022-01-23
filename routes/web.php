@@ -24,3 +24,6 @@ Route::get('/login', 'App\Http\Controllers\UserController@showLogin')->name('log
 Route::get('/sign-up', 'App\Http\Controllers\UserController@showSignUp')->name('signUp');
 Route::get('/forget-password', 'App\Http\Controllers\UserController@showForget')->name('forget');
 Route::get('/change-password/{email}/{token}', 'App\Http\Controllers\UserController@showChangePassword')->name('ChangePassword');
+
+
+Route::get('/dashboard', 'App\Http\Controllers\CustomerDashboardController@showDashboard')->name('cust.dashboard');
