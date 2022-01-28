@@ -2,13 +2,17 @@
 
 @section('content')
   <div class="my-8">
-    <h1 class="text-3xl">Log in</h1>
-    <p class="text-sm mt-2" >Welcome back, login to manage account</p>
+    <h1 class="text-3xl">{{_("Log in") }}</h1>
+    <p class="text-sm mt-2" >{{ _("Welcome back, login to manage account") }}</p>
 
-    <form action="" method="post" class="my-8">
+    <form action="{{ route('postLogin') }}" method="post" class="my-8">
+        @csrf
         <div class="" >
             <label for="email" class="text-sm block">Email Address</label>
             <input type="email" name="email" class="p-3 rounded-md mt-2 w-full" placeholder="Email Address">
+            @if($errors->first('email'))
+                <p class="text-red-500 text-xs my-2">{{ $errors->first('email') }}</p>
+            @endif
         </div>
         <div class="my-6" >
             <label for="passsword" class="text-sm block">Password</label>

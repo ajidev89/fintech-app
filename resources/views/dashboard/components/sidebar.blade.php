@@ -41,7 +41,7 @@
             </div>
         </a>
 
-        <a href="#" class="flex items-center space-x-4">
+        <a href="{{ route("logout") }}" class="flex items-center space-x-4">
             <div class="bg-purple-100 hover:bg-purple-300 transition-colors duration-300 delay-75 rounded-md py-2 px-4 flex items-center">
                 <div><i class="fi fi-rr-sign-out-alt"></i></div>
             </div>
