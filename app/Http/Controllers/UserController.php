@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Password;
+use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
@@ -89,7 +91,37 @@ class UserController extends Controller
             'email' => 'Could not send email',
         ]);   
     }
-    public function showChangePassword(){
-        return view('auth.change',['title'=>'Change Password']);
+    public function showChangePassword($email,$token){
+
+        return view('auth.change',['title'=>'Change Password','email'=>$email,'token'=>$token]);
+    }
+
+    public function postchangePasssword(Request $request){
+
+        $request->validate([
+            'email' => 'required|string|email|max:255|exists:users',
+            'password' => 'required|min:8|confirmed',
+            'token' => 'required',
+        ]);
+
+        $status = Password::reset(
+            $request->only('email', 'password', 'password_confirmation', 'token'),
+            function ($user, $password) {
+                $user->forceFill([
+                    'password' => Hash::make($password)
+                ])->setRememberToken(Str::random(60));
+                $user->save();
+                event(new PasswordReset($user));
+            }
+        );
+        
+        if ($status === Password::PASSWORD_RESET) {
+            return redirect()->route('login');  
+        }
+
+        return back()->withErrors([
+            "password" => 'We could not change your password please try again'
+        ]);            
+        
     }
 }

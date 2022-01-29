@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CustomerDashboardController extends Controller
 {
     //
 
     public function showDashboard(){
-        return view('dashboard.customer.dashboard',[ 'title' => 'Dashboard']);
+        $user =  Auth::user();
+        return view('dashboard.customer.dashboard',[ 'title' => 'Dashboard','user'=>$user]);
     }
 }

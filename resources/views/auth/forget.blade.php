@@ -5,6 +5,10 @@
     <h1 class="text-3xl">Forget Password</h1>
     <p class="text-sm mt-2" >A reset link will be sent to you email address</p>
 
+
+    @if(session()->get('success'))
+      <p class="text-green-500 text-xs my-2">{{ session()->get('success') }}</p>
+    @endif
     <form action="{{ route("postForgotPassword") }}" method="post" class="my-8">
         @csrf
         <div class="my-6" >
@@ -13,12 +17,12 @@
             @if($errors->first('email'))
                 <p class="text-red-500 text-xs my-2">{{ $errors->first('email') }}</p>
             @endif
-          </div>
+        </div>
+        
         <button type="submit" class="font-semibold bg-purple-600 p-3 w-full rounded-md text-gray-100 border" >Forget password</button>
         <div class="text-center text-sm my-6" >
             <a href="{{ route("login") }}" class="font-semibold text-purple-600" >Log in</a>
-        </div>
-        
+        </div>     
     </form>
   </div>
 

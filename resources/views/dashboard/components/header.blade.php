@@ -1,4 +1,4 @@
-<header class="bg-white px-10 py-4 mb-8 flex justify-between items-center ">
+<header class="bg-white px-10 py-4 flex justify-between items-center ">
     <div>
         <input type="text" class="bg-purple-100 rounded-md p-3 w-64 text-sm" placeholder="Search transaction">
     </div>

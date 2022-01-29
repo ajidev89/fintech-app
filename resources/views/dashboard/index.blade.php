@@ -10,7 +10,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div class="lg:flex lg:space-x-8">
+        <div class="lg:flex">
             @include('dashboard.components.sidebar')
             <div class="lg:flex-grow">
                 @include('dashboard.components.header')
