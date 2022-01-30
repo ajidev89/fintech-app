@@ -11,6 +11,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 class UserController extends Controller
 {
@@ -123,5 +124,30 @@ class UserController extends Controller
             "password" => 'We could not change your password please try again'
         ]);            
         
+    }
+
+    public function verifyEmail(){
+        $user = Auth::user();
+        event(new Registered($user));
+
+        return redirect()->route('cust.dashboard')->with([
+            'success' => 'Verification link has been sent to your email'
+        ]);
+
+    }
+
+    public function confirmEmail(EmailVerificationRequest $request){
+
+        if($request->hasValidSignature()) {
+            $request->fulfill();
+
+            return redirect()->route('cust.dashboard')->with([
+                'success' => 'You have verified your account'
+            ]);     
+        }else{
+            return redirect()->route('cust.dashboard')->with([
+                'error' => 'Invaild Signature'
+            ]);
+        }
     }
 }

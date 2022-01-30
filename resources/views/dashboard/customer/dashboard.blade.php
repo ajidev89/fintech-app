@@ -5,7 +5,10 @@
         <section class="bg-white shadow-sm flex justify-between rounded-md px-6 py-4 mb-4 items-center">
             <p>Kindly verify your email address by clicking the "Verify Email Address"</p>
             <div>
-                <button type="submit" class="font-semibold bg-purple-600 text-xs p-3 w-full rounded-md text-gray-100" >Verify Email Address</button>
+                <form action="{{ route('verifyEmail') }}" method="post">
+                    @csrf
+                    <button type="submit" class="font-semibold bg-purple-600 text-xs p-3 w-full rounded-md text-gray-100" >Verify Email Address</button>
+                </form>
             </div>
         </section>
     @endif    
@@ -32,4 +35,40 @@
             
         </div>{{ $user }}
     </section>
+@endsection
+
+
+@section('scripts')
+    @if(session()->get('success'))
+        <script>
+            Toastify({
+                text: "{{ session()->get('success') }}",
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                className: "border-l-4 rounded-md border-green-300 text-sm",
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "#fff",
+                    color:"#000",
+                },
+            }).showToast();
+        </script>
+    @endif
+    @if(session()->get('error'))
+        <script>
+            Toastify({
+                text: "{{ session()->get('error') }}",
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                className: "border-l-4 rounded-md border-red-300 text-sm",
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "#fff",
+                    color:"#000",
+                },
+            }).showToast();
+        </script>
+    @endif
 @endsection

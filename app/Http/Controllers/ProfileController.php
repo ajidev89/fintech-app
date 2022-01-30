@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use stdClass;
 use App\Models\User;
 use App\Models\Profile;
 use Illuminate\Http\Request;
@@ -11,6 +12,11 @@ class ProfileController extends Controller
 {
     public function showProfile(){
         $user = User::where('id', Auth::user()->id)->with('profile')->first();
+        if($user->profile()->exists()){
+            return view('dashboard.customer.profile',[ 'title' => 'Dashboard','user'=>$user]);
+        } 
+
+        $user->profile = "";
         return view('dashboard.customer.profile',[ 'title' => 'Dashboard','user'=>$user]);
     }
 

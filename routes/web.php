@@ -34,6 +34,8 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/dashboard', 'App\Http\Controllers\CustomerDashboardController@showDashboard')->name('cust.dashboard');
     Route::get('/profile', 'App\Http\Controllers\ProfileController@showProfile')->name('show.profile');
     Route::post('/profile', 'App\Http\Controllers\ProfileController@postProfile')->name('post.profile');
+    Route::post('/verify', 'App\Http\Controllers\UserController@verifyEmail')->name('verifyEmail');
+    Route::get('email/verify/{id}/{hash}', 'App\Http\Controllers\UserController@confirmEmail')->name('verification.verify');
 
     Route::get('logout','App\Http\Controllers\UserController@Logout')->name('logout');
 });
