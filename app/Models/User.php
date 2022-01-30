@@ -48,4 +48,9 @@ class User extends Authenticatable
     {
         $this->notify(new ResetPassword($token));
     }
+
+    public function profile()
+    {
+        return $this->hasOne(Profile::class,'uuid','id');
+    }
 }

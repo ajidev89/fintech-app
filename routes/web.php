@@ -32,5 +32,8 @@ Route::group(['middleware' => 'guest'], function(){
 
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/dashboard', 'App\Http\Controllers\CustomerDashboardController@showDashboard')->name('cust.dashboard');
+    Route::get('/profile', 'App\Http\Controllers\ProfileController@showProfile')->name('show.profile');
+    Route::post('/profile', 'App\Http\Controllers\ProfileController@postProfile')->name('post.profile');
+
     Route::get('logout','App\Http\Controllers\UserController@Logout')->name('logout');
 });

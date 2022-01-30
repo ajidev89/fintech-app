@@ -9,6 +9,14 @@
             </div>
         </section>
     @endif    
+    @if ($user->profile == null)
+        <section class="bg-white shadow-sm flex justify-between rounded-md px-6 py-4 mb-4 items-center">
+            <p>Kindly complete your registeraion in the profile page</p>
+            <div>
+                <a href="{{ route("show.profile") }}" class="font-semibold bg-purple-600 text-xs p-3 w-full rounded-md text-gray-100" >Complete Registeration</a>
+            </div>
+        </section>
+    @endif 
 
     <section class="bg-white shadow-sm rounded-md p-4">
         <h1 class="font-semibold text-2xl">Dashboard</h1>
@@ -22,6 +30,6 @@
                 <p class="font-bold uppercase text-xs" >Pending transfer</p>
             </div>
             
-        </div>
+        </div>{{ $user }}
     </section>
 @endsection

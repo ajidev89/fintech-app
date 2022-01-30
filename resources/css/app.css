@@ -16,3 +16,7 @@ body{
 .btn-big {
     @apply bg-purple-600 text-sm text-gray-100 py-4 px-10 lg:px-16 font-semibold rounded-md hover:bg-purple-400 hover:text-gray-100;
 }
+
+.active{
+    @apply text-purple-600
+}
