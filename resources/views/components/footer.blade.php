@@ -32,7 +32,7 @@
             Hallifield money is a subsidiaries of Hallifield Prime Investment Limited created on January 2022 with aim accessing small Payments both locally and over 20 country overseas without stress.
         </div> --}}
 
-        <div class="py-10 grid grid-cols-1">
+        <div class="grid grid-cols-1">
             <div class="text-center text-sm" >
                 Hallifield &#169; {{ date('Y') }}. All Rights Reserved.
             </div>           

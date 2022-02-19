@@ -18,6 +18,7 @@ Route::get('/', 'App\Http\Controllers\WebController@index')->name('home');
 Route::get('/about', 'App\Http\Controllers\WebController@about')->name('about');
 Route::get('/contact', 'App\Http\Controllers\WebController@contact')->name('contact');
 Route::get('/faqs', 'App\Http\Controllers\WebController@faqs')->name('faqs');
+Route::get('/add-cuurencies', 'App\Http\Controllers\CurrencyController@add')->name('addCuurrency');
 
 Route::group(['middleware' => 'guest'], function(){
     Route::get('/login', 'App\Http\Controllers\UserController@showLogin')->name('login');
@@ -34,8 +35,12 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/dashboard', 'App\Http\Controllers\CustomerDashboardController@showDashboard')->name('cust.dashboard');
     Route::get('/profile', 'App\Http\Controllers\ProfileController@showProfile')->name('show.profile');
     Route::post('/profile', 'App\Http\Controllers\ProfileController@postProfile')->name('post.profile');
+    Route::get('/send-funds', 'App\Http\Controllers\TransactionsController@showFunds')->name('send.funds');
+    Route::post('/send-funds', 'App\Http\Controllers\TransactionsController@postTransaction')->name('post.transaction');
+    Route::get('/transactions', 'App\Http\Controllers\TransactionsController@showTransaction')->name('show.transaction');
     Route::post('/verify', 'App\Http\Controllers\UserController@verifyEmail')->name('verifyEmail');
     Route::get('email/verify/{id}/{hash}', 'App\Http\Controllers\UserController@confirmEmail')->name('verification.verify');
+
 
     Route::get('logout','App\Http\Controllers\UserController@Logout')->name('logout');
 });
