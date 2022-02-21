@@ -2,8 +2,8 @@
 
 @section('content')
   <div class="my-8">
-    <h1 class="text-3xl">{{_("Log in") }}</h1>
-    <p class="text-sm mt-2" >{{ _("Welcome back, login to manage account") }}</p>
+    <h1 class="text-3xl">Log in</h1>
+    <p class="text-sm mt-2" >Welcome back, login to manage accounty</p>
 
     <form action="{{ route('postLogin') }}" method="post" class="my-8">
         @csrf
