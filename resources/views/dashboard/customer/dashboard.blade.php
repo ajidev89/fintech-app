@@ -33,7 +33,7 @@
                 <p class="font-bold uppercase text-xs" >Pending transfer</p>
             </div>
             
-        </div>{{ $user }}
+        </div>
     </section>
 @endsection
 
