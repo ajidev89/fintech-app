@@ -5,7 +5,7 @@
     <h1 class="text-3xl">Log in</h1>
     <p class="text-sm mt-2" >Welcome back, login to manage accounty</p>
 
-    <form action="{{ route('postLogin') }}" method="post" class="my-8">
+    <form action="" method="post" class="my-8">
         @csrf
         <div class="" >
             <label for="email" class="text-sm block">Email Address</label>
