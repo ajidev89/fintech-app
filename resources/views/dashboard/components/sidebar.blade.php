@@ -1,4 +1,4 @@
-<section class="w-80 p-8 h-screen bg-white border-r flex-shrink-0" >
+<section class="w-80 p-8 h-screen bg-white border- sticky r top-0 flex-shrink-0" >
     <div class="font-semibold uppercase text-sm">
         Hallifield
     </div>

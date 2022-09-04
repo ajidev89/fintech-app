@@ -25,9 +25,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('*', function ($view)
+        {
+            $user = request()->user();
+            $view->with('user', $user);
+        });
+        //Force ssl
         if (App::environment('production')) {
             URL::forceScheme('https');
         }
+
+        
     }
 }

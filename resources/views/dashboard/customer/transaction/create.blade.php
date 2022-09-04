@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-span-2">
                     <div>
-                        <input type="name" name="name" value="" class="p-3 rounded-md bg mt-2 w-full bg-purple-100" placeholder="Recipient name">
+                        <input type="name" name="name" value="{{ (!empty(old('name'))) ? old('name') : "" }}" class="p-3 rounded-md bg mt-2 w-full bg-gray-100" placeholder="Recipient name">
                         @if($errors->first('name'))
                             <p class="text-red-500 text-xs my-2">{{ $errors->first('name') }}</p>
                         @endif
@@ -24,7 +24,7 @@
                 </div>
                 <div class="col-span-2">
                     <div>
-                        <input type="email" name="email" class="p-3 rounded-md bg mt-2 w-full bg-purple-100" placeholder="Recipient email ">
+                        <input type="email" name="email"  value="{{ (!empty(old('email'))) ? old('email') : "" }}" class="p-3 rounded-md bg mt-2 w-full bg-gray-100" placeholder="Recipient email ">
                         @if($errors->first('email'))
                             <p class="text-red-500 text-xs my-2">{{ $errors->first('email') }}</p>
                         @endif
@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-span-2">
                     <div>
-                        <input type="tel" name="phone" class="p-3 rounded-md bg mt-2 w-full bg-purple-100" placeholder="Recipient phone">
+                        <input type="tel" name="phone" value="{{ (!empty(old('phone'))) ? old('phone') : "" }}" class="p-3 rounded-md bg mt-2 w-full bg-gray-100" placeholder="Recipient phone">
                         @if($errors->first('phone'))
                             <p class="text-red-500 text-xs my-2">{{ $errors->first('phone') }}</p>
                         @endif
@@ -50,10 +50,10 @@
                 </div>
                 <div class="col-span-2">
                     <div>
-                        <select name="currency" class="p-3 rounded-md bg mt-2 w-full bg-purple-100">
+                        <select name="currency" class="p-3 rounded-md bg mt-2 w-full bg-gray-100">
                             <option value="">Select Currency</option>
                             @foreach ($currencies as $currency)
-                                <option value="{{ $currency->code }}">{{ $currency->code }}</option>
+                                <option value="{{ $currency->code }}" @if(old('email')  == $currency->code) selected @endif>{{ $currency->code }}</option>
                             @endforeach
                         </select>
                         @if($errors->first('currency'))
@@ -68,7 +68,7 @@
                 </div>
                 <div class="col-span-2">
                     <div>
-                        <input type="number" name="amount"  value="" class="p-3 rounded-md bg mt-2 w-full bg-purple-100" placeholder="Amount">
+                        <input type="number" name="amount" value="{{ (!empty(old('amount'))) ? old('amount') : "" }}" class="p-3 rounded-md bg mt-2 w-full bg-gray-100" placeholder="Amount">
                         @if($errors->first('amount'))
                             <p class="text-red-500 text-xs my-2">{{ $errors->first('amount') }}</p>
                         @endif
@@ -81,9 +81,9 @@
                 </div>
                 <div class="col-span-2">
                     <div>
-                        <select name="method" class="p-3 rounded-md bg mt-2 w-full bg-purple-100">
-                            <option value="transfer">Transfer</option>
-                            <option value="cash">Cash</option>
+                        <select name="method" class="p-3 rounded-md bg mt-2 w-full bg-gray-100">
+                            <option @if(old('method') == 'transfer') selected @endif value="transfer">Transfer</option>
+                            <option @if(old('method') == 'cash') selected @endif value="cash">Cash</option>
                         </select>
                         @if($errors->first('method'))
                             <p class="text-red-500 text-xs my-2">{{ $errors->first('method') }}</p>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="col-span-2">
                     <div>
-                        <textarea name="purpose" id="" cols="30" rows="10" placeholder="Purpose" class="p-3 rounded-md bg mt-2 w-full bg-purple-100"></textarea>
+                        <textarea name="purpose" id="" cols="30"  rows="10" placeholder="Purpose" class="p-3 rounded-md bg mt-2 w-full bg-gray-100">{{ !empty(old('purpose')) ? old('purpose') : "" }}</textarea>
                         @if($errors->first('purpose'))
                             <p class="text-red-500 text-xs my-2">{{ $errors->first('purpose') }}</p>
                         @endif

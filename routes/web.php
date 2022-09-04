@@ -33,13 +33,15 @@ Route::group(['middleware' => 'guest'], function(){
 
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/dashboard', 'App\Http\Controllers\CustomerDashboardController@showDashboard')->name('cust.dashboard');
-    Route::get('/profile', 'App\Http\Controllers\ProfileController@showProfile')->name('show.profile');
-    Route::post('/profile', 'App\Http\Controllers\ProfileController@postProfile')->name('post.profile');
-    Route::get('/send-funds', 'App\Http\Controllers\TransactionsController@showFunds')->name('send.funds');
-    Route::post('/send-funds', 'App\Http\Controllers\TransactionsController@postTransaction')->name('post.transaction');
-    Route::get('/transactions', 'App\Http\Controllers\TransactionsController@showTransaction')->name('show.transaction');
     Route::post('/verify', 'App\Http\Controllers\UserController@verifyEmail')->name('verifyEmail');
     Route::get('email/verify/{id}/{hash}', 'App\Http\Controllers\UserController@confirmEmail')->name('verification.verify');
+    Route::group(['middleware' => 'VerifiedEmail'], function(){
+        Route::get('/profile', 'App\Http\Controllers\ProfileController@showProfile')->name('show.profile');
+        Route::post('/profile', 'App\Http\Controllers\ProfileController@postProfile')->name('post.profile');
+        Route::get('/send-funds', 'App\Http\Controllers\TransactionsController@showFunds')->name('send.funds');
+        Route::post('/send-funds', 'App\Http\Controllers\TransactionsController@postTransaction')->name('post.transaction');
+        Route::get('/transactions', 'App\Http\Controllers\TransactionsController@showTransaction')->name('show.transaction');
+    });
 
 
     Route::get('logout','App\Http\Controllers\UserController@Logout')->name('logout');

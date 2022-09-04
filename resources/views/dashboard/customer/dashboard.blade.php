@@ -14,7 +14,7 @@
     @endif    
     @if ($user->profile == null)
         <section class="bg-white shadow-sm flex justify-between rounded-md px-6 py-4 mb-4 items-center">
-            <p>Kindly complete your registeraion in the profile page</p>
+            <p>Kindly complete your registeration in the profile page</p>
             <div>
                 <a href="{{ route("show.profile") }}" class="font-semibold bg-purple-600 text-xs p-3 w-full rounded-md text-gray-100" >Complete Registeration</a>
             </div>
