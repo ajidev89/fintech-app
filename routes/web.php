@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'App\Http\Controllers\WebController@index')->name('home');
-Route::get('/about', 'App\Http\Controllers\WebController@about')->name('about');
-Route::get('/contact', 'App\Http\Controllers\WebController@contact')->name('contact');
-Route::get('/faqs', 'App\Http\Controllers\WebController@faqs')->name('faqs');
-Route::get('/add-cuurencies', 'App\Http\Controllers\CurrencyController@add')->name('addCuurrency');
+// Route::get('/about', 'App\Http\Controllers\WebController@about')->name('about');
+// Route::get('/contact', 'App\Http\Controllers\WebController@contact')->name('contact');
+// Route::get('/faqs', 'App\Http\Controllers\WebController@faqs')->name('faqs');
+// Route::get('/add-cuurencies', 'App\Http\Controllers\CurrencyController@add')->name('addCuurrency');
 
 Route::group(['middleware' => 'guest'], function(){
     Route::get('/login', 'App\Http\Controllers\UserController@showLogin')->name('login');

@@ -29,7 +29,7 @@
         new Grid({
             data: {!! $transactions !!},
             columns: [{
-                name: "Trx Code",
+                name: "Reference ID",
                 sort: true,
             },
             {

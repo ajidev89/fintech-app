@@ -6,7 +6,7 @@
         <h1 class="font-semibold text-xl px-4">My Profile</h1>
         <form method="POST" action="{{ route("post.profile") }}" class="grid grid-rows-1 gap-4 my-10 px-4 ">
             @csrf
-            <div class="text-sm grid grid-cols-3 gap-4">
+            <div class="text-sm grid grid-rows-1 lg:grid-cols-3 gap-4">
                 <div class="flex items-center" >
                     <label for="">Full Name <span class="text-red-500" >*</span></label>
                 </div>
@@ -25,7 +25,7 @@
                     </div> 
                 </div>
             </div>
-            <div class="text-sm grid grid-cols-3 gap-4">
+            <div class="text-sm grid grid-rows-1 lg:grid-cols-3 gap-4">
                 <div class="flex items-center" >
                     <label for="">Email <span class="text-red-500" >*</span></label>
                 </div>
@@ -35,7 +35,7 @@
                     </div>                    
                 </div>
             </div>
-            <div class="text-sm grid grid-cols-3 gap-4">
+            <div class="text-sm grid grid-rows-1 lg:grid-cols-3 gap-4">
                 <div class="flex items-center" >
                     <label for="">Phone <span class="text-red-500" >*</span></label>
                 </div>
@@ -48,7 +48,7 @@
                     </div>                    
                 </div>
             </div>
-            <div class="text-sm grid grid-cols-3 gap-4">
+            <div class="text-sm grid grid-rows-1 lg:grid-cols-3 gap-4">
                 <div class="flex items-center" >
                     <label for="">Address<span class="text-red-500" >*</span></label>
                 </div>
@@ -61,7 +61,7 @@
                     </div>                    
                 </div>
             </div>
-            <div class="text-sm grid grid-cols-3 gap-4">
+            <div class="text-sm grid grid-rows-1 lg:grid-cols-3 gap-4">
                 <div class="flex items-center" >
                     <label for="">National Identification Number (NIN) <span class="text-red-500" >*</span></label>
                 </div>

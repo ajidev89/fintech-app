@@ -18,12 +18,12 @@
                 <div class="p-4 bg-gray-100 min-h-screen rounded-md">
                     @yield('content')
                 </div> 
-                <div class="mt-14" >
+                <div class="lg:mt-14" >
                     @include('dashboard.components.footer')
                 </div>  
             </div>
         </div>
-       
         @yield('scripts')
+        <script src="{{ asset('js/index.js') }}"></script>
     </body>
 </html>

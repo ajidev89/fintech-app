@@ -13,8 +13,8 @@ class TransactionsController extends Controller
 {
     public function showFunds(){
         $user = User::where('id', Auth::user()->id)->with('profile')->first();
-        $currencies = Currency::all();
-        return view('dashboard.customer.transaction.create',[ 'title' => 'Dashboard','user' => $user,'currencies'=>$currencies]);
+        $currencies = Currency::where('status',true)->get();
+        return view('dashboard.customer.transaction.create',[ 'title' => 'Send funds','user' => $user,'currencies'=>$currencies]);
     }
 
 
@@ -31,13 +31,13 @@ class TransactionsController extends Controller
         //Add fee
         Transactions::create([
             'uuid' => Auth::user()->id,
-            'trxCode'=> Str::random(6),
+            'reference_code'=> Str::random(6),
             'amount' => $request->amount,
             'recipentName' => $request->name,
             'purpose' => $request->purpose,
             'email' => $request->email,
             'phone' => $request->phone,
-            'status' => "NOT-RECEIVED",
+            'status' => "NOT_RECEIVED",
             'method' => $request->method,
             'currency' => $request->currency
         ]);

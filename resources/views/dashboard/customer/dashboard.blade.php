@@ -2,7 +2,7 @@
 
 @section('content')
     @if ($user->email_verified_at == null)
-        <section class="bg-white shadow-sm flex justify-between rounded-md px-6 py-4 mb-4 items-center">
+        <section class="bg-white shadow-sm text-sm flex justify-between rounded-md px-6 py-4 mb-4 items-center">
             <p>Kindly verify your email address by clicking the "Verify Email Address"</p>
             <div>
                 <form action="{{ route('verifyEmail') }}" method="post">
@@ -13,7 +13,7 @@
         </section>
     @endif    
     @if ($user->profile == null)
-        <section class="bg-white shadow-sm flex justify-between rounded-md px-6 py-4 mb-4 items-center">
+        <section class="bg-white text-sm shadow-sm flex justify-between rounded-md px-6 py-4 mb-4 items-center">
             <p>Kindly complete your registeration in the profile page</p>
             <div>
                 <a href="{{ route("show.profile") }}" class="font-semibold bg-purple-600 text-xs p-3 w-full rounded-md text-gray-100" >Complete Registeration</a>
@@ -23,14 +23,22 @@
 
     <section class="bg-white shadow-sm rounded-md p-4">
         <h1 class="font-semibold text-2xl">Dashboard</h1>
-        <div class="grid grid-cols-3 gap-4 mt-10" >
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-10" >
             <div>
-                <div class="text-4xl font-semibold" >10</div>
+                <div class="text-4xl font-semibold">{{ $allTransaction }}</div>
                 <p class="font-bold uppercase text-xs" >Transactions</p>
             </div>
             <div>
-                <div class="text-4xl font-semibold" >10</div>
-                <p class="font-bold uppercase text-xs" >Pending transfer</p>
+                <div class="text-4xl font-semibold" >{{ $pendingTransaction }}</div>
+                <p class="font-bold uppercase text-xs" >Pending transfers</p>
+            </div>
+            <div>
+                <div class="text-4xl font-semibold" >{{ $processingTransaction }}</div>
+                <p class="font-bold uppercase text-xs" >Processing transfers</p>
+            </div>
+            <div>
+                <div class="text-4xl font-semibold" >{{ $sentTransaction }}</div>
+                <p class="font-bold uppercase text-xs" >Success transfers</p>
             </div>
             
         </div>

@@ -16,15 +16,20 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('uuid');
-            $table->string('trxCode');
+            $table->string('reference_code');
             $table->string('amount');
             $table->string('recipentName');
             $table->longText('purpose');
             $table->string('phone');
             $table->string('email');
             $table->string('method');
-            $table->string('status');
-            $table->string('currency');
+            $table->enum('status',[
+                'NOT_RECEIVED',
+                'RECEIVED',
+                'PROCESSING',
+                'SENT'
+            ]);
+            $table->uuid('currency_id');
             $table->string('bank')->nullable();
             $table->string('bankAccountNo')->nullable();
             $table->timestamps();

@@ -5,7 +5,7 @@
         <h1 class="font-semibold text-xl px-4">Send funds</h1>
         <form method="POST" action="{{ route("post.transaction") }}" class="grid grid-rows-1 gap-4 my-10 px-4 ">
             @csrf
-            <div class="text-sm grid grid-cols-3 gap-4">
+            <div class="text-sm grid grid-rows-1 lg:grid-cols-3 gap-4">
                 <div class="flex items-center" >
                     <label for="">Recipient name<span class="text-red-500" >*</span></label>
                 </div>
@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-sm grid grid-cols-3 gap-4">
+            <div class="text-sm grid grid-rows-1 lg:grid-cols-3 gap-4">
                 <div class="flex items-center" >
                     <label for="">Recipient email <span class="text-red-500" >*</span></label>
                 </div>
@@ -31,7 +31,7 @@
                     </div>                    
                 </div>
             </div>
-            <div class="text-sm grid grid-cols-3 gap-4">
+            <div class="text-sm grid grid-rows-1 lg:grid-cols-3 gap-4">
                 <div class="flex items-center" >
                     <label for="">Recipient phone <span class="text-red-500" >*</span></label>
                 </div>
@@ -44,7 +44,7 @@
                     </div>                    
                 </div>
             </div>
-            <div class="text-sm grid grid-cols-3 gap-4">
+            <div class="text-sm grid grid-rows-1 lg:grid-cols-3 gap-4">
                 <div class="flex items-center" >
                     <label for="">Currency<span class="text-red-500" >*</span></label>
                 </div>
@@ -62,7 +62,7 @@
                     </div>                    
                 </div>
             </div>
-            <div class="text-sm grid grid-cols-3 gap-4">
+            <div class="text-sm grid grid-rows-1 lg:grid-cols-3 gap-4">
                 <div class="flex items-center" >
                     <label for="">Amount<span class="text-red-500" >*</span></label>
                 </div>
@@ -75,7 +75,7 @@
                     </div>                    
                 </div>
             </div>
-            <div class="text-sm grid grid-cols-3 gap-4">
+            <div class="text-sm grid grid-rows-1 lg:grid-cols-3 gap-4">
                 <div class="flex items-center" >
                     <label for="">Delivery method<span class="text-red-500" >*</span></label>
                 </div>
@@ -91,7 +91,7 @@
                     </div>                    
                 </div>
             </div>
-            <div class="text-sm grid grid-cols-3 gap-4">
+            <div class="text-sm grid grid-rows-1 lg:grid-cols-3 gap-4">
                 <div class="flex items-start" >
                     <label for="">Purpose<span class="text-red-500" >*</span></label>
                 </div>

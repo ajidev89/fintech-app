@@ -1,7 +1,17 @@
-<section class="w-80 p-8 h-screen bg-white border- sticky r top-0 flex-shrink-0" >
-    <div class="font-semibold uppercase text-sm">
-        Hallifield
-    </div>
+<section id="sidebar" class="lg:w-80 w-4/5 shadow-lg lg:shadow-none lg:block hidden fixed z-20 p-8 h-screen bg-white lg:sticky   top-0 flex-shrink-0" >
+   <div class="flex justify-between items-center">
+        <div class="font-semibold uppercase text-sm">
+            Hallifield
+        </div>
+        <div class="lg:hidden">
+            <button id="closeModalButton">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+   </div>
+    
     <div class="my-10 text-sm grid grid-rows-1 gap-4" >
         <a href="{{ route("cust.dashboard") }}" class="flex items-center space-x-4">
             <div class="bg-purple-100 hover:bg-purple-300 transition-colors duration-300 delay-75 rounded-md py-2 px-4 flex items-center">
