@@ -8,7 +8,7 @@
         
             <small class="font-semibold text-center" >
                 <a href="{{ route('home') }}">Home</a> | 
-                <a href="{{ url()->current() }}" class="text-purple-600">{{ $pageName }}</a> 
+                <a href="{{ url()->current() }}" class="text-brand">{{ $pageName }}</a> 
             </small>
         </div>
         

@@ -13,7 +13,7 @@
                     <div class="flex items-center space-x-16 p-5 border-b-2">
                         <div class="flex items-center">
                             <div>
-                                <i class="fi fi-rr-call-incoming text-purple-600 text-4xl"></i>
+                                <i class="fi fi-rr-call-incoming text-brand text-4xl"></i>
                             </div>
                         </div>
                         <div class="col-span-2" >
@@ -27,7 +27,7 @@
                     <div class="flex items-center space-x-16 p-5 border-b-2">
                         <div class="flex items-center">
                             <div>
-                                <i class="fi fi-rr-envelope text-purple-600 text-4xl"></i>
+                                <i class="fi fi-rr-envelope text-brand text-4xl"></i>
                             </div>
                         </div>
                         <div class="col-span-2" >
@@ -40,7 +40,7 @@
                     <div class="flex items-center space-x-16 p-5 border-b-2">
                         <div class="flex items-center">
                             <div>
-                                <i class="fi fi-rr-marker text-purple-600 text-4xl"></i>
+                                <i class="fi fi-rr-marker text-brand text-4xl"></i>
                             </div>
                         </div>
                         <div class="col-span-2" >

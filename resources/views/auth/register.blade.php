@@ -27,7 +27,7 @@
             </div>
             <button type="submit" class="font-semibold bg-brand p-3 w-full rounded-md text-gray-100" >Sign up</button>
             <div class="text-center text-sm my-6" >
-                <a href="{{ route("login") }}" class="font-semibold text-purple-600" >Log in</a>
+                <a href="{{ route("login") }}" class="font-semibold text-brand" >Log in</a>
             </div>
         </form>
   </div>
