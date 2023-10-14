@@ -72,7 +72,7 @@
                 </div>
                 
         
-                <button type="submit" class="font-semibold bg-purple-600 p-3 w-full rounded-md text-gray-100" >Submit</button>
+                <button type="submit" class="font-semibold bg-brand p-3 w-full rounded-md text-gray-100" >Submit</button>
                 
             </form> 
         </div>

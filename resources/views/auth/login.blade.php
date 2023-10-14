@@ -22,7 +22,7 @@
             <a href="{{ route("forget") }}">Forgot Password</a>
         </div>
 
-        <button type="submit" class="font-semibold bg-purple-600 p-3 w-full rounded-md text-gray-100" >Log in</button>
+        <button type="submit" class="font-semibold bg-brand p-3 w-full rounded-md text-gray-100" >Log in</button>
         <div class="text-center text-sm my-6" >
             <a href="{{ route("signUp") }}" class="font-semibold text-purple-600" >Sign up</a>
         </div>

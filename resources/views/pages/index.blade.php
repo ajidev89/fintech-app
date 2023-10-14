@@ -47,7 +47,7 @@
                             <input type="number" name="amount" class="p-3 rounded-md mt-2 w-full bg-gray-200" placeholder="Amount to send">
                         </div>
 
-                        <input type="submit" class="font-semibold bg-purple-600 p-3 w-full rounded-md text-gray-100 mt-4" value="Send">
+                        <input type="submit" class="font-semibold bg-brand p-3 w-full rounded-md text-gray-100 mt-4" value="Send">
                     </form>
                 </div>
             

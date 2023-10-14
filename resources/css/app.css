@@ -10,13 +10,13 @@ body{
     @apply text-gray-900;
 }
 .btn{
-    @apply bg-purple-600 text-sm text-gray-100 py-3 px-6 lg:px-8 font-semibold rounded-md hover:bg-purple-400 hover:text-gray-100;
+    @apply bg-brand text-sm text-gray-100 py-3 px-6 lg:px-8 font-semibold rounded-md hover:bg-purple-400 hover:text-gray-100;
 }
 
 .btn-big {
-    @apply bg-purple-600 text-sm text-gray-100 py-4 px-10 lg:px-16 font-semibold rounded-md hover:bg-purple-400 hover:text-gray-100;
+    @apply bg-brand text-sm text-gray-100 py-4 px-10 lg:px-16 font-semibold rounded-md hover:bg-purple-400 hover:text-gray-100;
 }
 
 .active{
-    @apply text-purple-600
+    @apply text-white
 }

@@ -27,7 +27,7 @@
             <input type="hidden" name="email" value="{{ $email }}">
             <input type="hidden" name="token" value="{{ $token }}">
 
-            <button type="submit" class="font-semibold bg-purple-600 p-3 w-full rounded-md text-gray-100" >Change Password</button>
+            <button type="submit" class="font-semibold bg-brand p-3 w-full rounded-md text-gray-100" >Change Password</button>
             
         </form>
   </div>

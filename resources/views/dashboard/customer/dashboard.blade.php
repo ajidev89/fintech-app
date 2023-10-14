@@ -7,7 +7,7 @@
             <div>
                 <form action="{{ route('verifyEmail') }}" method="post">
                     @csrf
-                    <button type="submit" class="font-semibold bg-purple-600 text-xs p-3 w-full rounded-md text-gray-100" >Verify Email Address</button>
+                    <button type="submit" class="font-semibold bg-brand text-xs p-3 w-full rounded-md text-gray-100" >Verify Email Address</button>
                 </form>
             </div>
         </section>
@@ -16,7 +16,7 @@
         <section class="bg-white text-sm shadow-sm flex justify-between rounded-md px-6 py-4 mb-4 items-center">
             <p>Kindly complete your registeration in the profile page</p>
             <div>
-                <a href="{{ route("show.profile") }}" class="font-semibold bg-purple-600 text-xs p-3 w-full rounded-md text-gray-100" >Complete Registeration</a>
+                <a href="{{ route("show.profile") }}" class="font-semibold bg-brand text-xs p-3 w-full rounded-md text-gray-100" >Complete Registeration</a>
             </div>
         </section>
     @endif 

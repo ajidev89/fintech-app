@@ -25,7 +25,7 @@
                 <label for="confirm_passsword" class="text-sm block">Confirm password</label>
                 <input type="password" name="password_confirmation" class="p-3 rounded-md mt-2 w-full" placeholder="Confirm password">
             </div>
-            <button type="submit" class="font-semibold bg-purple-600 p-3 w-full rounded-md text-gray-100" >Sign up</button>
+            <button type="submit" class="font-semibold bg-brand p-3 w-full rounded-md text-gray-100" >Sign up</button>
             <div class="text-center text-sm my-6" >
                 <a href="{{ route("login") }}" class="font-semibold text-purple-600" >Log in</a>
             </div>
