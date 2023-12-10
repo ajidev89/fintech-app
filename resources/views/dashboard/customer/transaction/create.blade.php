@@ -53,7 +53,7 @@
                         <select name="currency" class="p-3 rounded-md bg mt-2 w-full bg-gray-100">
                             <option value="">Select Currency</option>
                             @foreach ($currencies as $currency)
-                                <option value="{{ $currency->code }}" @if(old('email')  == $currency->code) selected @endif>{{ $currency->code }}</option>
+                                <option value="{{ $currency->id }}" @if(old('currency')  == $currency->code) selected @endif>{{ $currency->code }}</option>
                             @endforeach
                         </select>
                         @if($errors->first('currency'))
@@ -112,6 +112,7 @@
 @endsection
 
 @section('scripts')
+    <script src="https://js.paystack.co/v1/inline.js"></script>
     @if(session()->get('success'))
         <script>
             Toastify({

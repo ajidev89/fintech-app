@@ -1,4 +1,4 @@
-<section id="sidebar" class="lg:w-80 w-4/5 shadow-lg lg:shadow-none lg:block hidden fixed z-20 p-8 h-screen bg-white lg:sticky   top-0 flex-shrink-0" >
+<section id="sidebar" class="lg:w-64 w-64 bg-brand  shadow-lg lg:shadow-none lg:block hidden fixed z-20 p-8 h-screen text-white lg:sticky top-0 flex-shrink-0" >
    <div class="flex justify-between items-center">
         <div class="font-semibold uppercase text-sm">
             Hallifield
@@ -15,13 +15,13 @@
     <div class="my-10 text-sm grid grid-rows-1 gap-4" >
         <a href="{{ route("cust.dashboard") }}" class="flex items-center space-x-4">
             <div class="@if(route('cust.dashboard')==url()->current()) bg-brand/100 @else bg-brand/10  @endif   hover:transition-colors duration-300 delay-75 rounded-md py-2 px-4 flex items-center">
-                <div><i class="fi fi-rr-apps  @if(route('cust.dashboard') == url()->current()) active @else text-brand  @endif"></i></div>
+                <div><i class="fi fi-rr-apps  @if(route('cust.dashboard') == url()->current()) @endif"></i></div>
             </div>
             <div>
                 <p>Dashboard</p>
             </div>
         </a>
-        <p class="uppercase font-normal text-gray-600 mt-6" >Transaction</p>
+        <p class="uppercase font-normal text-gray-400 mt-6" >Transaction</p>
 
         <a href="{{ route("send.funds") }}" class="flex items-center space-x-4">
             <div class="@if(route('send.funds')==url()->current()) bg-brand/100 @else bg-brand/10  @endif   transition-colors duration-300 delay-75 rounded-md py-2 px-4 flex items-center">
@@ -40,7 +40,7 @@
             </div>
         </a>
 
-        <p class="uppercase font-normal text-gray-600 mt-6" >Settings</p>
+        <p class="uppercase font-normal text-gray-400 mt-6" >Settings</p>
 
         <a href="{{ route('show.profile') }}" class="flex items-center space-x-4">
             <div class="@if(route('show.profile')==url()->current()) bg-brand/100 @else bg-brand/10  @endif transition-colors duration-300 delay-75 rounded-md py-2 px-4 flex items-center">

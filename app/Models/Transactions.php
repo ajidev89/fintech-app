@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Transactions extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'uuid',
         'trxCode',
@@ -18,10 +20,23 @@ class Transactions extends Model
         'email',
         'method',
         'status',
-        'currency',
+        'currency_id',
         'bank',
-        'bankAccountNo'
+        'bankAccountNo',
+        "reference_code"
     ];
+
+    public function currency() : HasOne
+    {
+        return $this->hasOne(Currency::class, 'id' ,'currency_id');
+    }
+
+
+    public function user(): HasOne
+    {
+        return $this->hasOne(User::class, 'id' ,'uuid');
+    }
+
 
     
 }

@@ -4,7 +4,13 @@
     <section class="bg-white shadow-sm rounded-md p-4">
         <h1 class="font-semibold text-xl px-4">Transactions</h1>
         <div id="wrapper" class="my-8 text-sm"></div>
+
+        <div class="flex gap-3 justify-center">
+            {{ $transactions->links() }}
+        </div>
+       
     </section>
+
 @endsection
 
 @section('scripts')
@@ -26,37 +32,33 @@
     @endif
 
     <script>
+        const transactions = @json($transactions->items());
         new Grid({
-            data: {!! $transactions !!},
+            data: transactions,
             columns: [{
-                name: "Reference ID",
-                sort: true,
+                    name: "Reference code",
+                    sort: true,
+                    data:  transaction => transaction.reference_code
+                },
+                {
+                    name: "Amount",
+                    sort: true,
+                },
+                {
+                    name: "Email",
+                    sort: true,
+                },{
+                    name: "Phone",
+                    width: '50%'
+                },
+                ,{
+                    name: "Status",
+                    width: '50%'
+                }
+            ],
+            'search': {
+                'placeholder': 'Search...'
             },
-            {
-                name: "Amount",
-                sort: true,
-            },
-            {
-                name: "Email",
-                sort: true,
-            },{
-                name: "Phone",
-                width: '50%'
-            },
-            ,{
-                name: "Status",
-                width: '50%'
-            }
-        ],
-        'search': {
-        'placeholder': 'Search...'
-        },
-        'pagination': {
-        'previous': '⬅️',
-        'next': '➡️',
-        'showing': '😃 Displaying',
-        'results': () => 'Records'
-        }
         }).render(document.getElementById("wrapper"));;
     </script>
 @endsection

@@ -653,10 +653,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2.5rem;
 }
 
-.w-4\/5 {
-  width: 80%;
-}
-
 .flex-shrink-0 {
   flex-shrink: 0;
 }
@@ -981,9 +977,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
-.text-gray-600 {
+.text-white {
   --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .shadow-2xl {
@@ -1171,8 +1167,8 @@ body{
     display: none;
   }
 
-  .lg\:w-80 {
-    width: 20rem;
+  .lg\:w-64 {
+    width: 16rem;
   }
 
   .lg\:flex-grow {
