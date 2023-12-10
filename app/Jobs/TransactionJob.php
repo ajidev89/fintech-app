@@ -38,6 +38,6 @@ class TransactionJob implements ShouldQueue
     public function handle()
     {
         Mail::to($this->transaction->user->email)->send(new TransactionMail($this->transaction));
-        Mail::to($this->transaction->user->email)->send(new AdminTransactionMail($this->transaction));
+        Mail::to("hallifieldprime@gmail.com")->send(new AdminTransactionMail($this->transaction));
     }
 }
