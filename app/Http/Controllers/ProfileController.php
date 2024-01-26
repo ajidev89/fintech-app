@@ -27,7 +27,7 @@ class ProfileController extends Controller
             'last' =>'required|string|max:50',
             'phone' => 'required|digits:11',
             'address' => 'required|string|max:50',
-            'nin' => 'required|digits:10'
+            'nin' => 'required|digits:11'
         ]);
         
         $profile = Profile::where('uuid', Auth::user()->id)->first();
